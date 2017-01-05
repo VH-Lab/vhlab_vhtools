@@ -15,6 +15,9 @@
 	  "vhlab_C_libraries": "git://github.com/VH-Lab/vhlab_C_libraries.git",
 	  "vhlab_Spike2Scripts": "git://github.com/VH-Lab/vhlab_Spike2Scripts.git",
 	  "vhlab_publishedstudies": "git://github.com/VH-Lab/vhlab_publishedstudies.git",
+	  "vhlab_NewStim": "https://github.com/VH-Lab/vhlab_NewStim.git",
+	  "vhlab_matlibraries": "https://github.com/VH-Lab/vhlab_NewStim.git",
+	  "vhlab_AnimalMonitor": "https://github.com/VH-Lab/vhlab_ArrayTomography.git",
 	  "vhlab_ArrayTomography": "https://github.com/VH-Lab/vhlab_ArrayTomography.git"
   }
 }
