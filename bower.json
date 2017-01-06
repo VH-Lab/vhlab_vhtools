@@ -8,18 +8,18 @@
   "main": "",
   "license": "",
   "dependencies": {
-	  "vhlab_mltbx_toolbox": "git://github.com/VH-Lab/vhlab_mltbx_toolbox.git",
+	  "toolbox/vhlab_mltbx_toolbox": "git://github.com/VH-Lab/vhlab_mltbx_toolbox.git",
 	  "vhlab_thirdparty": "git://github.com/VH-Lab/vhlab_thirdparty.git",
-	  "vhlab_mltbx_NewStim": "https://github.com/VH-Lab/vhlab_mltbx_NewStim.git",
-	  "vhlab_mltbx_matlibraries": "https://github.com/VH-Lab/vhlab_mltbx_matlibraries.git",
-	  "vhlab_mltbx_SeminarSchedule": "git://github.com/VH-Lab/vhlab_mltbx_SeminarSchedule.git",
-	  "vhlab_LabViewCode": "git://github.com/VH-Lab/vhlab_LabViewCode.git",
-	  "vhlab_C_libraries": "git://github.com/VH-Lab/vhlab_C_libraries.git",
-	  "vhlab_Spike2Scripts": "git://github.com/VH-Lab/vhlab_Spike2Scripts.git",
-	  "vhlab_publishedstudies": "git://github.com/VH-Lab/vhlab_publishedstudies.git",
-	  "vhlab_mlapp_AnimalMonitor": "https://github.com/VH-Lab/vhlab_mlapp_ArrayTomography.git",
-	  "vhlab_mlapp_TwoPhoton": "https://github.com/VH-Lab/vhlab_mlapp_TwoPhoton.git",
-	  "vhlab_mlapp_RunExperiment": "https://github.com/VH-Lab/vhlab_mlapp_RunExperiment.git",
-	  "vhlab_mlapp_ArrayTomography": "https://github.com/VH-Lab/vhlab_mlapp_ArrayTomography.git"
+	  "toolbox/vhlab_mltbx_NewStim": "https://github.com/VH-Lab/vhlab_mltbx_NewStim.git",
+	  "libraries/vhlab_mltbx_matlibraries": "https://github.com/VH-Lab/vhlab_mltbx_matlibraries.git",
+	  "toolbox/vhlab_mltbx_SeminarSchedule": "git://github.com/VH-Lab/vhlab_mltbx_SeminarSchedule.git",
+	  "other/vhlab_LabViewCode": "git://github.com/VH-Lab/vhlab_LabViewCode.git",
+	  "other/vhlab_C_libraries": "git://github.com/VH-Lab/vhlab_C_libraries.git",
+	  "other/vhlab_Spike2Scripts": "git://github.com/VH-Lab/vhlab_Spike2Scripts.git",
+	  "studies/vhlab_publishedstudies": "git://github.com/VH-Lab/vhlab_publishedstudies.git",
+	  "apps/vhlab_mlapp_AnimalMonitor": "https://github.com/VH-Lab/vhlab_mlapp_ArrayTomography.git",
+	  "apps/vhlab_mlapp_TwoPhoton": "https://github.com/VH-Lab/vhlab_mlapp_TwoPhoton.git",
+	  "apps/vhlab_mlapp_RunExperiment": "https://github.com/VH-Lab/vhlab_mlapp_RunExperiment.git",
+	  "apps/vhlab_mlapp_ArrayTomography": "https://github.com/VH-Lab/vhlab_mlapp_ArrayTomography.git"
   }
 }
