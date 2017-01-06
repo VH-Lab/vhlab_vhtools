@@ -8,9 +8,9 @@
   "main": "",
   "license": "",
   "dependencies": {
-	  "mydir": "git://github.com/VH-Lab/vhlab_mltbx_toolbox.git",
-	  "mydir": "git://github.com/VH-Lab/vhlab_thirdparty.git",
-	  "mydir": "https://github.com/VH-Lab/vhlab_mltbx_NewStim.git",
+	  "vhlab_mltbx_toolbox": "git://github.com/VH-Lab/vhlab_mltbx_toolbox.git",
+	  "vhlab_thirdparty": "git://github.com/VH-Lab/vhlab_thirdparty.git",
+	  "vhlab_mltbx_NewStim": "https://github.com/VH-Lab/vhlab_mltbx_NewStim.git",
 	  "vhlab_mltbx_matlibraries": "https://github.com/VH-Lab/vhlab_mltbx_matlibraries.git",
 	  "vhlab_mltbx_SeminarSchedule": "git://github.com/VH-Lab/vhlab_mltbx_SeminarSchedule.git",
 	  "vhlab_LabViewCode": "git://github.com/VH-Lab/vhlab_LabViewCode.git",
