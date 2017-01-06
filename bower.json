@@ -11,7 +11,7 @@
 	  "toolbox/vhlab_mltbx_toolbox": "git://github.com/VH-Lab/vhlab_mltbx_toolbox.git",
 	  "vhlab_thirdparty": "git://github.com/VH-Lab/vhlab_thirdparty.git",
 	  "toolbox/vhlab_mltbx_NewStim": "https://github.com/VH-Lab/vhlab_mltbx_NewStim.git",
-	  "libraries/vhlab_mltbx_matlibraries": "https://github.com/VH-Lab/vhlab_mltbx_matlibraries.git",
+	  "lib/vhlab_mltbx_matlibraries": "https://github.com/VH-Lab/vhlab_mltbx_matlibraries.git",
 	  "toolbox/vhlab_mltbx_SeminarSchedule": "git://github.com/VH-Lab/vhlab_mltbx_SeminarSchedule.git",
 	  "other/vhlab_LabViewCode": "git://github.com/VH-Lab/vhlab_LabViewCode.git",
 	  "other/vhlab_C_libraries": "git://github.com/VH-Lab/vhlab_C_libraries.git",
