@@ -22,7 +22,7 @@ function vhtools_startup(toolsprefix, verbose);
 if nargin<1,
 	myfilepath = which('vhtools_startup');
 	pi = find(myfilepath==filesep);
-	toolboxprefix = [myfilepath(1:pi(end-1)-1) filesep];
+	toolsprefix = [myfilepath(1:pi(end-1)-1) filesep];
 end;
 
 if nargin>1, vb = verbose; else, vb = 0; end;
@@ -46,21 +46,7 @@ if vb,
 end;
 addpath(genpath(toolsprefix));
 
-% step 3: look for a BLAHBLAHInit.m file; if it is there, run it
-
-d = dir(toolsprefix);
-dirnames = dirlist_trimdots(d); % in step 2 we get vhlab_mltbx_toolbox, where this function lives
-
-for d=1:length(dirnames),
-	files = dir([toolsprefix filesep dirnames(d) filesep '*Init.m']);
-	for f=1:length(files),
-		eval([toolsprefix filesep dirnames(d) filesep files(f).name]);
-	end;
-end;
-
-vhtools_thirdparty_startup([thirdparty_prefix],1);
-
-  % remove existing paths if necesary
+  % remove 'archived_code' paths if necesary
 pathstr = pathstr2cellarray_vhs;
 matches = strfind(pathstr,'archived_code');
 inds = find(1-isempty_cell_vhs(matches));
@@ -69,6 +55,19 @@ if ~isempty(inds),
                 disp(['Note: removing ' int2str(length(inds)) ' directories that contain the string ''archived_code'' from the path.']);
         end;
         rmpath(pathstr{inds});
+end;
+
+% step 3: look for a BLAHBLAHInit.m file; if it is there, run it
+
+d = dir(toolsprefix);
+dirnames = dirlist_trimdots(d); % in step 2 we get vhlab_mltbx_toolbox, where this function lives
+
+for d=1:length(dirnames),
+	files = dir([toolsprefix filesep dirnames{d} filesep '*Init.m']);
+	for f=1:length(files),
+        [parent,fname,ext]=fileparts(files(f).name);
+		eval(fname);
+	end;
 end;
 
 vhtools_start
