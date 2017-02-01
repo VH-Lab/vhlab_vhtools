@@ -10,7 +10,7 @@ function vhtools_startup(toolsprefix, verbose);
 %  If it is not provided, then the function searches for its own path using
 %  WHICH.
 %
-%  If VERBOSE is present and is 1, then each library is installed with a
+%  If VERBOSE is not specified or is 1, then each library is installed with a
 %  startup message like 'Initializing NewStim library'
 %
 %  Normally, the user sets up this file so it is automatically run by the user's
@@ -25,7 +25,7 @@ if nargin<1,
 	toolsprefix = [myfilepath(1:pi(end-1)-1) filesep];
 end;
 
-if nargin>1, vb = verbose; else, vb = 0; end;
+if nargin>1, vb = verbose; else, vb = 1; end;
 
 % step 1: remove existing paths if necesary
 pathstr = pathstr2cellarray_vhs;
@@ -66,6 +66,7 @@ for d=1:length(dirnames),
 	files = dir([toolsprefix filesep dirnames{d} filesep '*Init.m']);
 	for f=1:length(files),
         [parent,fname,ext]=fileparts(files(f).name);
+		if vb, disp(['Initializing ' dirnames{d} '...']); end;
 		eval(fname);
 	end;
 end;
