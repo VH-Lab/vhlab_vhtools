@@ -56,6 +56,16 @@ if ~isempty(inds),
         end;
         rmpath(pathstr{inds});
 end;
+  % remove '.git' paths if necesary
+pathstr = pathstr2cellarray_vhs;
+matches = strfind(pathstr,'.git');
+inds = find(1-isempty_cell_vhs(matches));
+if ~isempty(inds),
+        if vb,
+                disp(['Note: removing ' int2str(length(inds)) ' directories that contain the string ''.git'' from the path (git hidden files).']);
+        end;
+        rmpath(pathstr{inds});
+end;
 
 % step 3: look for a BLAHBLAHInit.m file; if it is there, run it
 
