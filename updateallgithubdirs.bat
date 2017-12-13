@@ -1,1 +1,1 @@
-FOR /D %G in (C:\Documents\GitRepos\*) Do cd %G & call git pull & cd ..
+for /D /r %i in (*.*) do (cd %i && echo %i && git pull && cd ..)
