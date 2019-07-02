@@ -6,12 +6,16 @@ function vhtools_startup(toolsprefix, verbose);
 %
 %  Initializes tools written by Steve Van Hooser and others 1999-2017.
 %
-%  TOOLSPREFIX should be the directory where the tool directories reside.
+%  TOOLSPREFIX should be the directory where the user toolbox directories reside.
 %  If it is not provided, then the function searches for its own path using
-%  WHICH.
+%  WHICH. In that case, the TOOLSPREFIX is taken to be 1 directory 'above' the 
+%  directory that contains the .m file for VHTOOLS_STARTUP.
 %
 %  If VERBOSE is not specified or is 1, then each library is installed with a
 %  startup message like 'Initializing NewStim library'
+%
+%  Each subdirectory of TOOLSPREFIX is searched for a file that ends in 'Init.m'.
+%  If such a file is located, then it is run to initialize the directory.
 %
 %  Normally, the user sets up this file so it is automatically run by the user's
 %  startup.m file.
