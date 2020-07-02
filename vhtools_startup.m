@@ -33,11 +33,14 @@ if nargin>1, vb = verbose; else, vb = 1; end;
 
 % step 1: remove existing paths if necesary
 pathstr = pathstr2cellarray_vhs;
-matches = strfind(pathstr,'vhlab');
-inds = find(1-isempty_cell_vhs(matches));
+matches1 = strfind(pathstr,'vhlab-');
+inds1 = find(1-isempty_cell_vhs(matches1));
+matches2 = strfind(pathstr,'vhlab_');
+inds2 = find(1-isempty_cell_vhs(matches2));
+inds = union(inds1,inds2);
 if ~isempty(inds),
 	if vb, 
-		disp(['Note: removing ' int2str(length(inds)) ' directories that contain vhlab from the path.']);
+		disp(['Note: removing ' int2str(length(inds)) ' directories that contain vhlab- or vhlab_ from the path.']);
 	end;
 	rmpath(pathstr{inds});
 end;
