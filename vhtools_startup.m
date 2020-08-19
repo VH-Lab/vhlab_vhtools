@@ -37,10 +37,12 @@ matches1 = strfind(pathstr,'vhlab-');
 inds1 = find(1-isempty_cell_vhs(matches1));
 matches2 = strfind(pathstr,'vhlab_');
 inds2 = find(1-isempty_cell_vhs(matches2));
-inds = union(inds1,inds2);
+matches3 = strfind(pathstr,'NDI-');
+inds3 = find(1-isempty_cell_vhs(matches3));
+inds = union(union(inds1,inds2),inds3);
 if ~isempty(inds),
 	if vb, 
-		disp(['Note: removing ' int2str(length(inds)) ' directories that contain vhlab- or vhlab_ from the path.']);
+		disp(['Note: removing ' int2str(length(inds)) ' directories that contain vhlab- or vhlab_ or NDI- from the path.']);
 	end;
 	rmpath(pathstr{inds});
 end;
